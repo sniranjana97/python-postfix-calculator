@@ -3,7 +3,9 @@
 
 rpnclient.py:
 RUN: python ./rpnclient.py 13002 "4 5 * 4 -"
+
 EXECUTION LOGIC:
+
 INPUT: Obtains two command line argument inputs- port number and the expression.
 1. A socket is first created and used to connect to host with s.connect()
 2. Input is obtained as string and is split and the client iterates over it.
@@ -16,8 +18,11 @@ INPUT: Obtains two command line argument inputs- port number and the expression.
 9. If the expression contains more integers than the required, it would also cause an error and close the execution.
 
 rpnserver.py:
+
 RUN: python ./rpnserver.py 13002
+
 EXECUTION LOGIC:
+
 INPUT: Obtains a command line argument input- port number
 Also obtains a string as input from the client.
 1. A socket is created and is bound to a port number using s.bind()
